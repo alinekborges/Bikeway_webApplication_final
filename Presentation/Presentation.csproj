@@ -65,6 +65,7 @@
     <Content Include="fonts\icomoon\icomoon.svg" />
     <Content Include="fonts\icomoon\license.txt" />
     <Content Include="fonts\icomoon\Read Me.txt" />
+    <Content Include="images\appbar.star.delete.png" />
     <Content Include="images\appbar.star.png" />
     <Content Include="images\profile.png" />
     <Content Include="images\appbar.magnify.png" />
@@ -75,8 +76,6 @@
     <Content Include="Contact.aspx" />
     <Content Include="javascript\modernizr.custom.buttons.js" />
     <Content Include="javascript\modernizr1.custom.js" />
-    <Content Include="stylesheets\component2.css" />
-    <Content Include="stylesheets\creativeButtons.css" />
     <Content Include="stylesheets\demo.css" />
     <Content Include="javascript\modernizr-2.6.2.min.js" />
     <Content Include="javascript\modernizr.custom1.js" />
@@ -173,7 +172,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="stylesheets\.DS_Store" />
     <Content Include="fonts\.DS_Store" />
     <Content Include="fonts\codropsicons\.DS_Store" />
     <Content Include="fonts\codropsicons\codropsicons.eot" />

@@ -27,7 +27,7 @@
 			<section>
 				    <nav class="cl-effect-12">
 					    <a href="MemberPages/Profile.aspx" >Profile</a>
-                        <a href="Networks.aspx">Netorks</a>
+                        <a href="Networks.aspx">Networks</a>
 					    <a href="https://github.com/alinekborges/Bikeway_webApp" >GitHub</a>
 					    <a href="About.aspx" >About</a>					    
 					    <a href="Contact.aspx" >Contact</a>

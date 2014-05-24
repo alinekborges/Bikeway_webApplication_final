@@ -41,7 +41,6 @@
   <ItemGroup>
     <Compile Include="n8925666.cs">
       <DependentUpon>n8925666.xsd</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="n8925666.Designer.cs">
       <AutoGen>True</AutoGen>

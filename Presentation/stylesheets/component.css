@@ -190,21 +190,7 @@ perspective effects (not including the modals and the overlay).
 	font-style: normal;
 }
 
-.button-fav {
-    border: none;
-    background: #1e5c99;
-    text-align:right;
-    cursor: pointer;
-    max-height:60%;
-    max-width:6%;
-    margin-right:10px;
-    margin-left:auto;
-    border-radius: 0.5em;
-}
 
-.button-fav:hover {
-   background:#69a7e2;
-}
 
 
 

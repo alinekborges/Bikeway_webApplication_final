@@ -19,8 +19,20 @@ namespace Presentation
         {
             
         }
-
         
+
+        protected void ObjectDataSource1_Selecting(object sender, ObjectDataSourceSelectingEventArgs e)
+        {
+            if (Request.IsAuthenticated)
+            {
+                CheckBox checkBox = (CheckBox)LoginView1.FindControl("CheckBox1");
+
+                if (checkBox.Checked)
+                {
+                    e.InputParameters["UserId"] = Membership.GetUser().ProviderUserKey;
+                }
+            }
+        }
 
        /* private void GetClosestStations(string latitude, string longitude)
         {

@@ -13,11 +13,10 @@
 		<link rel="shortcut icon" href="../favicon.ico" /> 
 		<link rel="stylesheet" type="text/css" href="stylesheets/default.css" />
 		<link rel="stylesheet" type="text/css" href="stylesheets/component.css" />
-        <link rel="stylesheet" type="text/css" href="stylesheets/creativeButtons.css" />
 		<script src="javascript/modernizr-2.6.2.min.js"></script>	
         <script src="javascript/modernizr.custom.js"></script>
         <script src="javascript/modernizr.custom.buttons.js"></script>
-        <script src="js/modernizr.custom1.js"></script>
+    
         
 </head>
 	<body>
@@ -38,7 +37,7 @@
 			     <section>
 				    <nav class="cl-effect-12 nav-link" >
 					    <a href="Login.aspx" >Sign in</a>
-                        <a href="Networks.aspx">Netorks</a>
+                        <a href="Networks.aspx">Networks</a>
 					    <a href="https://github.com/alinekborges/Bikeway_webApp" >GitHub</a>
 					    <a href="About.aspx" >About</a>					    
 					    <a href="Contact.aspx" >Contact</a>
@@ -47,11 +46,12 @@
             </header>            
 			<div class="main-page">
                
-                    <asp:Label ID="Label1" runat="server" Text="Type in your city" class="text-large"/>        
+                    <asp:Label ID="Label1" runat="server" Text="Search station name, city or country" class="text-large"/>        
                     <br />
                     <div>
                         <asp:TextBox ID="cityInput" runat="server" CssClass="text-box-large" />
                         <br />
+                        
                         <asp:Button id="demo1" CssClass="button" runat="server"  Text="search"/>
                         <%--<asp:button id="demo" class="button" onclick="onButtonClick()"  runat="server">get my location</asp:button>--%>
                         <%--<asp:ImageButton ID="searchButton" runat="server" ImageUrl="/images/appbar.magnify.png"  CssClass="button search-button"   />--%>
@@ -125,7 +125,7 @@
 			     <section>
 				    <nav class="cl-effect-12 nav-link" >
 					    <a href="MemberPages/Profile.aspx" >Profile</a>
-                        <a href="Networks.aspx">Netorks</a>
+                        <a href="Networks.aspx">Networks</a>
 					    <a href="https://github.com/alinekborges/Bikeway_webApp" >GitHub</a>
 					    <a href="About.aspx" >About</a>					    
 					    <a href="Contact.aspx" >Contact</a>
@@ -136,10 +136,12 @@
 			<div class="main-page">
 
                
-                    <asp:Label ID="Label1" runat="server" Text="Type in your city" class="text-large"/>        
+                    <asp:Label ID="Label1" runat="server" Text="Search for station, city or country" class="text-large"/>        
                     <br />
                     <div>
                         <asp:TextBox ID="cityInput" runat="server" CssClass="text-box-large" />
+                        <br />
+                        <asp:CheckBox ID="CheckBox1" runat="server"  Text="Search my city only" />
                         <br />
                      <asp:Button id="demo1" CssClass="button" runat="server"  Text="search"/>
                         <br />
@@ -157,8 +159,10 @@
                             class="station-list" DataSourceID="ObjectDataSource1"  DataKeyNames="StationId" OnItemCommand="StationsListView_ItemCommand"
                             >
                             <LayoutTemplate>
-                            <table cellpadding="2" runat="server" id="stations" 
-                                >
+                            <table cellpadding="2" runat="server" id="stations"  >
+                                <tr>
+
+                                </tr>
                                 <tr runat="server" id="itemPlaceholder">
                                 </tr>
                             </table>
@@ -183,12 +187,16 @@
                                                 Text='<%#Eval("Slots") %>' class="station-name"/>
                                         </td>
                                         <td>
-                                             <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="/images/appbar.star.png" CssClass="buton button-fav" commandname="Favorite" />
+                                            <br />
+
+                                        </td>
+                                        <td>                                           
+                                             <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="/images/appbar.star.png" CssClass="button button-fav" commandname="Favorite" ImageAlign="Right" />
                                         </td>           
                                 </tr>
                             </ItemTemplate>
                  </asp:ListView>
-                        <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="selectSearch" TypeName="Business.DataObjectMethods">
+                        <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="selectSearch" TypeName="Business.DataObjectMethods" OnSelecting="ObjectDataSource1_Selecting">
                             <SelectParameters>
                                 <asp:ControlParameter ControlID="cityInput" Name="Name" PropertyName="Text" Type="String" ConvertEmptyStringToNull="False" DefaultValue="" />
                             </SelectParameters>
@@ -229,7 +237,6 @@
 
 		<!-- classie.js by @desandro: https://github.com/desandro/classie -->
 		<script src="javascript/classie.js"></script>
-        <script src="javascript/classie_button.js"></script>
 		<script src="javascript/modalEffects.js"></script>
         <script src="javascript/polyfills.js"></script>
         <script src="javascript/demo2.js"></script>
