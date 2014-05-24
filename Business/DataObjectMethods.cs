@@ -22,6 +22,8 @@ namespace Business
         private static DataAccess.n8925666TableAdapters.SearchNetworksTableAdapter searchNetworkdTableAdapter = new DataAccess.n8925666TableAdapters.SearchNetworksTableAdapter();
         private static DataAccess.n8925666TableAdapters.Stations1TableAdapter searchStationsFromCoordinate = new DataAccess.n8925666TableAdapters.Stations1TableAdapter();
         private static DataAccess.n8925666TableAdapters.SelectSearchAllTableAdapter selectSearchAllTableAdapter = new DataAccess.n8925666TableAdapters.SelectSearchAllTableAdapter();
+        private static DataAccess.n8925666TableAdapters.SearchAllInCityTableAdapter searchAllInCityTableAdapter = new DataAccess.n8925666TableAdapters.SearchAllInCityTableAdapter();
+        private static DataAccess.n8925666TableAdapters.UserCityTableAdapter userCityTableAdapter = new DataAccess.n8925666TableAdapters.UserCityTableAdapter();
 
         // NETWORKS
         [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Select, true)]
@@ -142,5 +144,34 @@ namespace Business
             return selectSearchAllTableAdapter.GetData(Name);
         }
 
+        [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Select, false)]
+        public static Data.n8925666.SearchAllInCityDataTable searchAllInCity(string Name, Guid UserId)
+        {
+            return searchAllInCityTableAdapter.GetData(Name, UserId);
+        }
+
+        [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Select, false)]
+        public static Data.n8925666.UserCityDataTable selectUserCity(Guid UserId)
+        {
+            return userCityTableAdapter.GetData(UserId);
+        }
+
+        [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Insert)]
+        public static void insertUserCity(Guid UserId, string City)
+        {
+            userCityTableAdapter.Insert(UserId, City);
+        }
+
+        [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Update)]
+        public static void updateUserCity(string City, Guid Original_UserId)
+        {
+            userCityTableAdapter.Update(City, Original_UserId);
+        }
+
+        [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Delete)]
+        public static void deleteUserCity(Guid Original_UserId)
+        {
+            userCityTableAdapter.Delete(Original_UserId);
+        }
     }
 }
