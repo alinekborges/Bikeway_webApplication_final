@@ -34,7 +34,7 @@
                 </div>
                      
 			<header>
-				<h1> BIKEWAY <span>The best source for shared-bikes information</span></h1>
+				<h1> BIKEWAY <span>The best source for bike share information</span></h1>
 			<section>
 				    <nav class="cl-effect-12">
 					    <a href="MemberPages/Profile.aspx" >Profile</a>

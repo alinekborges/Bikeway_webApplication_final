@@ -33,7 +33,7 @@
                 <a href="Register.aspx" class="button">Register</a>
 			</div>
 			<header>
-				<h1> BIKEWAY <span>The best source for shared-bike information</span></h1>
+				<h1> BIKEWAY <span>The best source for bike share information</span></h1>
 			     <section>
 				    <nav class="cl-effect-12 nav-link" >
 					    <a href="Login.aspx" >Sign in</a>
@@ -128,7 +128,7 @@
 		    
 			</div>
 			<header>
-				<h1> BIKEWAY <span>The best source for shared-bike information</span></h1>
+				<h1> BIKEWAY <span>The best source for bike share information</span></h1>
 			     <section>
 				    <nav class="cl-effect-12 nav-link" >
 					    <a href="MemberPages/Profile.aspx" >Profile</a>
