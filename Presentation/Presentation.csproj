@@ -59,17 +59,15 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="Default.aspx" />
-    <Content Include="DefaultNew.aspx" />
-    <Content Include="DefaultTest.aspx" />
     <Content Include="fonts\icomoon\icomoon.dev.svg" />
     <Content Include="fonts\icomoon\icomoon.svg" />
     <Content Include="fonts\icomoon\license.txt" />
     <Content Include="fonts\icomoon\Read Me.txt" />
     <Content Include="images\appbar.star.delete.png" />
     <Content Include="images\appbar.star.png" />
+    <Content Include="images\favicon.ico" />
     <Content Include="images\profile.png" />
     <Content Include="images\appbar.magnify.png" />
-    <Content Include="Info.aspx" />
     <Content Include="javascript\classie _buttons.js" />
     <Content Include="javascript\demo1.js" />
     <Content Include="javascript\demo2.js" />
@@ -112,27 +110,6 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="DefaultNew.aspx.cs">
-      <DependentUpon>DefaultNew.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="DefaultNew.aspx.designer.cs">
-      <DependentUpon>DefaultNew.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="DefaultTest.aspx.cs">
-      <DependentUpon>DefaultTest.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="DefaultTest.aspx.designer.cs">
-      <DependentUpon>DefaultTest.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Info.aspx.cs">
-      <DependentUpon>Info.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Info.aspx.designer.cs">
-      <DependentUpon>Info.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

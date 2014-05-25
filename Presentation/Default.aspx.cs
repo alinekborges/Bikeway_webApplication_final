@@ -25,7 +25,9 @@ namespace Presentation
         {
             if (Request.IsAuthenticated)
             {
+
                 CheckBox checkBox = (CheckBox)LoginView1.FindControl("CheckBox1");
+                Debug.WriteLine("check box is " + checkBox.Checked);
 
                 if (checkBox.Checked)
                 {

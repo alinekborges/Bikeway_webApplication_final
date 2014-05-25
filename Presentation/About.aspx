@@ -11,7 +11,7 @@
 		<title>Bikeway</title>
 		<meta name="description" content="BikeWay" />
 		<meta name="author" content="Aline & Lucas" />
-		<link rel="shortcut icon" href="../favicon.ico" /> 
+		<link rel="shortcut icon" href="../images/favicon.ico" />
 		<link rel="stylesheet" type="text/css" href="stylesheets/default.css" />
 		<link rel="stylesheet" type="text/css" href="stylesheets/component.css" />
         <link rel="stylesheet" type="text/css" href="stylesheets/component2.css" />
@@ -24,15 +24,26 @@
     <div class="container">
             <!-- Top Navigation -->
 			<div class="codrops-top clearfix">
-				<span class="right"><button class="md-trigger" data-modal="modal-16">Sign in</button></span>
+                <form id="login" runat="server">
+                    <asp:LoginView runat="server">
+                        <AnonymousTemplate>
+                            <a href="Login.aspx" class="button">Login</a>
+                            <a href="Register.aspx" class="button">Register</a>
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            <asp:LoginStatus ID="LoginStatus2" runat="server" CssClass="button" />
+                        </LoggedInTemplate>
+                    </asp:LoginView>
+                </form>               
+				
 			</div>
 			<header>
-				<h1> BIKEWAY <span>The best source for shared-bikes information</span></h1>
+				<h1> BIKEWAY <span>The best source for Bike Share information</span></h1>
 			<section>
 				    <nav class="cl-effect-12">
 					    <a href="MemberPages/Profile.aspx" >Profile</a>
                         <a href="Networks.aspx">Networks</a>
-					    <a href="https://github.com/alinekborges/Bikeway_webApp" >GitHub</a>
+					    <a href="https://github.com/alinekborges/Bikeway_webApplication_final/" >GitHub</a>
 					    <a href="About.aspx" >About</a>					    
 					    <a href="Contact.aspx" >Contact</a>
 				    </nav>

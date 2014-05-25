@@ -222,6 +222,14 @@ ListView {
     font-size: large;
 }
 
+.text-box-grid {
+	min-width: 200px;
+	border: 1px solid #3366FF;
+	border-left: 4px solid #3366FF;
+    height: 30px;
+    font-size: large;
+}
+
 
 TextBox {
 	width: 230px;
@@ -328,6 +336,25 @@ button:hover {
 }
 
 .button:hover {
+	background: #153f69;
+}
+
+.small-button {
+	border: none;
+	padding: 0.6em 1.2em;
+	background: #01488e;
+	color: #fff;
+	font-family: 'Lato', Calibri, Arial, sans-serif;
+	font-size: 0.6em;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	cursor: pointer;
+	display: inline-block;
+	margin: 3px 2px;
+	border-radius: 2px;
+}
+
+.small-button:hover {
 	background: #153f69;
 }
 
@@ -498,3 +525,9 @@ nav-link a:focus {
 	-moz-transform: translateX(-50%) translateY(-50%) scale(1);
 	transform: translateX(-50%) translateY(-50%) scale(1);
 }
+
+.grid-city {
+    border:none;
+    width:40%;
+}
+

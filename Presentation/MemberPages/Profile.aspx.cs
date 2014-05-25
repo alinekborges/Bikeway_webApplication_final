@@ -27,19 +27,12 @@ namespace Presentation.MemberPages
 
         protected void StationsListView_ItemCommand(object sender, ListViewCommandEventArgs e)
         {
-            //Label lbl = (Label)LoginView1.FindControl("Label1"); lbl.Text = "something";
-            //StationsListView = (ListView)LoginView1.FindControl("StationsListView");
-            //Label Status = (Label)LoginView1.FindControl("StatusLabel");
 
             if (e.CommandName == "Delete")
             {
-                //ListViewItem itemClicked = e.Item;
                 ListViewDataItem dataItem = (ListViewDataItem)e.Item;
                 string stationID =
                 StationsListView.DataKeys[dataItem.DisplayIndex].Value.ToString();
-
-
-                //Label1.Text = stationID;
 
                 string memberUser = Membership.GetUser().ProviderUserKey.ToString();
                 Guid id = new Guid(memberUser);
@@ -54,25 +47,14 @@ namespace Presentation.MemberPages
                     Status.Text = "Something went wrong :(";
 
                 }
-                // Find Controls/Retrieve values from the item  here
-
-                //ImageButton imageButton = (ImageButton)StationsListView.FindControl("ImageButton1");
-                // imageButton.ImageUrl = "/images/appbar.magnify.png";
-
 
             }
-        }
-
-        protected void Unnamed_Click(object sender, EventArgs e)
-        {
-            //Save city to database
         }
 
         protected void ObjectDataSource2_Updating(object sender, ObjectDataSourceMethodEventArgs e)
         {
             e.InputParameters["Original_UserId"] = Membership.GetUser().ProviderUserKey;
-
-
+            
         }
     }
 }

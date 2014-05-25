@@ -5,23 +5,34 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
 		<title>Bikeway</title>
-		<meta name="description" content="BikeWay />
+		<meta name="description" content="BikeWay" />
 		<meta name="author" content="Aline & Lucas" />
-		<link rel="shortcut icon" href="../favicon.ico"> 
+		<link rel="shortcut icon" href="../images/favicon.ico" />
 		<link rel="stylesheet" type="text/css" href="stylesheets/default.css" />
 		<link rel="stylesheet" type="text/css" href="stylesheets/component.css" />
 		<script src="js/modernizr.custom.js"></script>
 </head>
 <body>
-
+    <form id="login" runat="server">
     <div class="container">
             <!-- Top Navigation -->
-			<div class="codrops-top clearfix">
-				<span class="right"><button class="md-trigger" data-modal="modal-16">Sign in</button></span>
-			</div>
+
+			
+                <div class="codrops-top clearfix">
+                    <asp:LoginView ID="LoginView1" runat="server">
+                        <AnonymousTemplate>
+                            <a href="Login.aspx" class="button">Login</a>
+                            <a href="Register.aspx" class="button">Register</a>
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            <asp:LoginStatus ID="LoginStatus2" runat="server" CssClass="button" />
+                        </LoggedInTemplate>
+                    </asp:LoginView>
+                </div>
+                     
 			<header>
 				<h1> BIKEWAY <span>The best source for shared-bikes information</span></h1>
 			<section>
@@ -40,7 +51,6 @@
                  </div>	
 				<div class="column">
 					<div class="column">
-				    <form id="form1" runat="server" >
                         <div>    
                             <h1>Login</h1>
                             <p>
@@ -77,12 +87,14 @@
                             <p>
                                 &nbsp;</p>    
                         </div>
-                    </form>				
+  			
 				    </div>
 				</div>
                 	
 			</div>
+            
 		</div><!-- /container -->
+        </form>	
 		<div class="md-overlay"></div><!-- the overlay element -->
 
 		<!-- classie.js by @desandro: https://github.com/desandro/classie -->

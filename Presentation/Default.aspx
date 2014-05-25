@@ -10,7 +10,7 @@
 		<title>Bikeway</title>
 		<meta name="description" content="BikeWay" />
 		<meta name="author" content="Aline & Lucas" />
-		<link rel="shortcut icon" href="../favicon.ico" /> 
+		<link rel="shortcut icon" href="../images/favicon.ico" />
 		<link rel="stylesheet" type="text/css" href="stylesheets/default.css" />
 		<link rel="stylesheet" type="text/css" href="stylesheets/component.css" />
 		<script src="javascript/modernizr-2.6.2.min.js"></script>	
@@ -33,7 +33,7 @@
                 <a href="Register.aspx" class="button">Register</a>
 			</div>
 			<header>
-				<h1> BIKEWAY <span>The best source for shared-bikes information</span></h1>
+				<h1> BIKEWAY <span>The best source for shared-bike information</span></h1>
 			     <section>
 				    <nav class="cl-effect-12 nav-link" >
 					    <a href="Login.aspx" >Sign in</a>
@@ -46,7 +46,7 @@
             </header>            
 			<div class="main-page">
                
-                    <asp:Label ID="Label1" runat="server" Text="Search station name, city or country" class="text-large"/>        
+                    <asp:Label ID="Label1" runat="server" Text="Search a station name, city or country" class="text-large"/>        
                     <br />
                     <div>
                         <asp:TextBox ID="cityInput" runat="server" CssClass="text-box-large" />
@@ -128,12 +128,12 @@
 		    
 			</div>
 			<header>
-				<h1> BIKEWAY <span>The best source for shared-bikes information</span></h1>
+				<h1> BIKEWAY <span>The best source for shared-bike information</span></h1>
 			     <section>
 				    <nav class="cl-effect-12 nav-link" >
 					    <a href="MemberPages/Profile.aspx" >Profile</a>
                         <a href="Networks.aspx">Networks</a>
-					    <a href="https://github.com/alinekborges/Bikeway_webApp" >GitHub</a>
+					    <a href="https://github.com/alinekborges/Bikeway_webApplication_final/" >GitHub</a>
 					    <a href="About.aspx" >About</a>					    
 					    <a href="Contact.aspx" >Contact</a>
 				    </nav>
@@ -143,7 +143,7 @@
 			<div class="main-page">
 
                
-                    <asp:Label ID="Label1" runat="server" Text="Search for station, city or country" class="text-large"/>        
+                    <asp:Label ID="Label1" runat="server" Text="Search for a station, city or country" class="text-large"/>        
                     <br />
                     <div>
                         <asp:TextBox ID="cityInput" runat="server" CssClass="text-box-large" />
@@ -153,13 +153,11 @@
                      <asp:Button id="demo1" CssClass="button" runat="server"  Text="search"/>
                         <br />
                         <asp:Label ID="StatusLabel" runat="server" Text="" ></asp:Label>
-                        <%--<asp:button id="demo" class="button" onclick="onButtonClick()"  runat="server">get my location</asp:button>--%>
-                        <%--<asp:ImageButton ID="searchButton" runat="server" ImageUrl="/images/appbar.magnify.png"  CssClass="button search-button"   />--%>
-                        <br />
+                         <br />
 	
                        
                         <br />
-                        <%--<a href="#set-8" class="hi-icon hi-icon-contract">Contact</a>--%>
+                       
                         <br />
 
                         <asp:ListView runat="server" ID="StationsListView" 
@@ -224,7 +222,7 @@
         </asp:LoginView> 
 
 
-		<!-- All modals added here for the demo. You would of course just have one, dynamically created -->
+		<%--<!-- All modals added here for the demo. You would of course just have one, dynamically created -->
 		<div class="md-modal md-effect-16" id="modal-16">
 			<div class="md-content">
 				<h3>Bikeway</h3>
@@ -238,10 +236,9 @@
 					<button class="md-close">Close me!</button>
 				</div>
 			</div>
-		</div>
+		</div>--%>
 
 
-             
           </form>
 
 		<div class="md-overlay"></div><!-- the overlay element -->
@@ -250,7 +247,6 @@
 		<script src="javascript/classie.js"></script>
 		<script src="javascript/modalEffects.js"></script>
         <script src="javascript/polyfills.js"></script>
-        <script src="javascript/demo2.js"></script>
 
 		<!-- for the blur effect -->
 		<!-- by @derSchepp https://github.com/Schepp/CSS-Filters-Polyfill -->
@@ -261,86 +257,5 @@
 		<script src="javascript/cssParser.js"></script>
 		<script src="javascript/css-filters-polyfill.js"></script>
 
-        <script>
-
-            function getLocation() {
-                if (navigator.geolocation) {
-                    //showCustomer(position.coords.latitude, position.coords.longitude)
-                    navigator.geolocation.getCurrentPosition(showPosition);
-                }
-                else { Document.getElementById("Demo1").innerHTML = "Geolocation is not supported by this browser."; }
-                
-            }
-            function showPosition(position) {
-
-
-
-                var latitude = position.coords.latitude;
-                var longitude = position.coords.longitude;
-
-                var percentage = 0.0001;
-                var percentage_long = percentage/2;
-
-                var d_latitude = Math.abs(latitude * percentage);
-                var d_longitude = Math.abs(longitude * percentage_long);
-                var latitude_low = latitude - d_latitude;
-                var latitude_high = latitude + d_latitude;
-                var longitude_low = longitude - d_longitude;
-                var longitude_high = longitude + d_longitude;
-
-
-                document.getElementById("LatitudeLowLabel").textContent = latitude_low;
-                document.getElementById("LatitudeHighLabel").textContent = latitude_high;
-                document.getElementById("LongitudeLowLabel").textContent = longitude_low;
-                document.getElementById("LongitudeHighLabel").textContent = longitude_high;
-                
-                //document.getElementById()
-
-
-
-                document.getElementById("cityInput").value = latitude_low;
-
-
-            }
-		</script>
-
-        <script>
-            var buttons7Click = Array.prototype.slice.call(document.querySelectorAll('#btn-click button')),
-				buttons9Click = Array.prototype.slice.call(document.querySelectorAll('button.btn-8g')),
-				totalButtons7Click = buttons7Click.length,
-				totalButtons9Click = buttons9Click.length;
-
-            buttons7Click.forEach(function (el, i) { el.addEventListener('click', activate, false); });
-            buttons9Click.forEach(function (el, i) { el.addEventListener('click', activate, false); });
-
-            function activate() {
-                var self = this, activatedClass = 'btn-activated';
-
-                if (classie.has(this, 'btn-7h')) {
-                    // if it is the first of the two btn-7h then activatedClass = 'btn-error';
-                    // if it is the second then activatedClass = 'btn-success'
-                    activatedClass = buttons7Click.indexOf(this) === totalButtons7Click - 2 ? 'btn-error' : 'btn-success';
-                }
-                else if (classie.has(this, 'btn-8g')) {
-                    // if it is the first of the two btn-8g then activatedClass = 'btn-success3d';
-                    // if it is the second then activatedClass = 'btn-error3d'
-                    activatedClass = buttons9Click.indexOf(this) === totalButtons9Click - 2 ? 'btn-success3d' : 'btn-error3d';
-                }
-
-                if (!classie.has(this, activatedClass)) {
-                    classie.add(this, activatedClass);
-                    setTimeout(function () { classie.remove(self, activatedClass) }, 1000);
-                }
-            }
-
-            //document.querySelector('.btn-7i').addEventListener('click', function () {
-            //    classie.add(document.querySelector('#trash-effect'), 'trash-effect-active');
-            //}, false);
-		</script>
-        <asp:Label ID="LatitudeLowLabel" runat="server" Text="0.0"></asp:Label>
-        <asp:Label ID="LatitudeHighLabel" runat="server" Text="0.0"></asp:Label>
-        <asp:Label ID="LongitudeLowLabel" runat="server" Text="0.0"></asp:Label>
-        <asp:Label ID="LongitudeHighLabel" runat="server" Text="0.0"></asp:Label>
-        
-	</body>
+        </body>
 </html>
