@@ -41,7 +41,7 @@
 				<h1> BIKEWAY <span>The best source for Bike Share information</span></h1>
 			<section>
 				    <nav class="cl-effect-12">
-					    <a href="MemberPages/Profile.aspx" >Profile</a>
+					    <a href="Default.aspx">Home</a>
                         <a href="Networks.aspx">Networks</a>
 					    <a href="https://github.com/alinekborges/Bikeway_webApplication_final/" >GitHub</a>
 					    <a href="About.aspx" >About</a>					    

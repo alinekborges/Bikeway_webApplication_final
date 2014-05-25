@@ -123,13 +123,6 @@ ListView {
 }
 
 
-.column-right {
-    text-align:left;
-}
-
-.column-right p {
-    text-align:left;
-}
 
 .column {
 	float: left;
@@ -158,6 +151,37 @@ ListView {
 	line-height: 1.5;
     color:#1e5c99;
 }
+
+
+.column-right {
+	float: left;
+	width: 50%;
+	padding: 0 2em;
+	min-height: 300px;
+	position: relative;
+    color:#1e5c99; /*text_color*/
+}
+
+    .column-right header {
+        font-size:large;
+    }
+
+
+.column-right:nth-child(2) {
+	box-shadow: -1px 0 0 rgba(0,0,0,0.1);
+}
+
+.column-right p {
+	font-weight: 300;
+	font-size: 1em;
+	padding-left:10px;
+	margin: 0;
+	text-align: left;
+	line-height: 1.5;
+    color:#1e5c99;
+}
+
+
 
 .login {
 	float:right;
