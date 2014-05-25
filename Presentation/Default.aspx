@@ -10,7 +10,8 @@
 		<title>Bikeway</title>
 		<meta name="description" content="BikeWay" />
 		<meta name="author" content="Aline & Lucas" />
-		<link rel="shortcut icon" href="../images/favicon.ico" />
+		<link rel="shortcut icon" href="images/favicon.ico" />
+
 		<link rel="stylesheet" type="text/css" href="stylesheets/default.css" />
 		<link rel="stylesheet" type="text/css" href="stylesheets/component.css" />
 		<script src="javascript/modernizr-2.6.2.min.js"></script>	
@@ -198,7 +199,7 @@
 
                                 </td>                                       
                                 <td >                                          
-                                      <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="/images/appbar.star.png" CssClass="button-fav" commandname="Favorite" />
+                                      <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="images/appbar.star.png" CssClass="button-fav" commandname="Favorite" />
                                 </td>           
                                 </tr>
                             </ItemTemplate>

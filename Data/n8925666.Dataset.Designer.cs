@@ -1978,7 +1978,7 @@ namespace Data {
                 base.Columns.Add(this.columnStationId);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnStationId}, true));
-                this.columnName.MaxLength = 50;
+                this.columnName.MaxLength = 255;
                 this.columnLongitude.AllowDBNull = false;
                 this.columnLatitude.AllowDBNull = false;
                 this.columnFreeBikes.AllowDBNull = false;

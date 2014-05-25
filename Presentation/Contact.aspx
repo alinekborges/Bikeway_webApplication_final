@@ -10,7 +10,7 @@
 		<title>Bikeway</title>
 		<meta name="description" content="BikeWay" />
 		<meta name="author" content="Aline & Lucas" />
-		<link rel="shortcut icon" href="../images/favicon.ico" />
+		<link rel="shortcut icon" href="images/favicon.ico" />
         <link rel="icon" href="../images/favicon.ico" type="image/ico" />
 		<link rel="stylesheet" type="text/css" href="stylesheets/default.css" />
 		<link rel="stylesheet" type="text/css" href="stylesheets/component.css" />
