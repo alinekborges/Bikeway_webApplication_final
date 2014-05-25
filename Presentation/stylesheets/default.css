@@ -142,7 +142,6 @@ ListView {
 
     .column header {
         font-size:large;
-
     }
 
 
@@ -332,18 +331,24 @@ button:hover {
 	background: #153f69;
 }
 
+.station-list {
+    margin-right:auto;
+    margin-left:auto;
+    text-align:center;
+    width:60%;
+}
+
 .button-fav {    
-    border: none;
+    border: 10px solid #fff;
+    border-radius: 20px;
 	color: #fff;
 	cursor: pointer;
 	display: inline-block;
     background: #1e5c99;
-    text-align:right;
-    min-height:76px;
-    min-width:76px;
-    height:60%;
-    width:60%;
-    border-radius: 0.5em;
+    height:76px;
+    width:76px;
+    text-align:left;
+    
 }
 
 .button-fav:hover {
@@ -353,7 +358,6 @@ button:hover {
 .station-list-container {
     text-align:center;
     margin-left:auto;
-    margin-right:auto;
 	border: none;
 	font-family: inherit;
 	font-size: inherit;
@@ -363,7 +367,7 @@ button:hover {
 	padding: 10px;
 	display: inline-block;
     height:auto;
-    width:100%;
+    width:80%;
 	margin: 10px 10px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
@@ -382,7 +386,7 @@ station-list-container:first-child {
 }
 
 .list-main {
-    width:90%;
+    width:70%;
 }
 
 .station-list-main {
@@ -392,15 +396,13 @@ station-list-container:first-child {
     margin-right:auto;
 }
 
-.station-list-container:after {
-	content: '';
-	position: absolute;
-	z-index: -1;
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	transition: all 0.3s;
+.station-list-city {
+    width:20%;
 }
 
+    .station-list-city:hover {
+    
+    }
 
 .station-list-container:hover {
 	background: #2980d4;

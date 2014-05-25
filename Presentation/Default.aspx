@@ -67,39 +67,46 @@
                             >
                             <LayoutTemplate>
                             <table cellpadding="2" runat="server" id="stations" 
-                                >
+                                 class="station-list" >
                                 <tr runat="server" id="itemPlaceholder">
                                 </tr>
                             </table>
                             </LayoutTemplate>
                             <ItemTemplate>
-                                <tr id="tr1" runat="server" class="station-list-container station-list-main"   >
-                                <td colspan="2" align="center" 
-                                    class="StationName">
+                                <tr id="tr1" runat="server" class="station-list"   >
+                                <td class="StationName station-list-container station-list-main">
+
                                     <asp:Label  ID="FirstNameLabel" runat="server" 
-                                    Text='<%#Eval("Name") %>' class="station-name"/> 
+                                        Text='<%#Eval("Name") %>' class="station-name"/> 
                         
-                                <br />
+                                     <br />
                        
-                                   <asp:Label ID="Label2" runat="server" Text="Bikes:" CssClass="station-list-label" />
+                                    <asp:Label ID="Label2" runat="server" Text="Bikes:" CssClass="station-list-label" />
                                     <asp:Label  ID="Label5" runat="server" 
                                     Text='<%#Eval("FreeBikes") %>' class="station-name"/>
                        
                        
-                                   <asp:Label ID="Label3" runat="server" Text="Slots:" CssClass="station-list-label" />
+                                    <asp:Label ID="Label3" runat="server" Text="Slots:" CssClass="station-list-label" />
                                     <asp:Label  ID="Label4" runat="server" 
                                     Text='<%#Eval("Slots") %>' class="station-name"/>
-                                    
-                               </td>             
-                               <td>
-                                   
-                               </td>                    
+                                </td>
+                                <td class="StationName station-list-container station-list-city">
+
+                                    <asp:Label  ID="Label6" runat="server" 
+                                        Text='<%#Eval("City") %>' class="station-name"/>
+                                     <br />
+                                    <asp:Label  ID="Label8" runat="server" 
+                                    Text='<%#Eval("Country") %>' class="station-name"/>
+
+                                </td>                                       
+       
                                 </tr>
                             </ItemTemplate>
                  </asp:ListView>
-                        <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="selectSearch" TypeName="Business.DataObjectMethods">
+                        <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="searchAllInCity" TypeName="Business.DataObjectMethods">
                             <SelectParameters>
                                 <asp:ControlParameter ControlID="cityInput" Name="Name" PropertyName="Text" Type="String" ConvertEmptyStringToNull="False" DefaultValue="" />
+                                <asp:Parameter DbType="Guid" Name="UserId" />
                             </SelectParameters>
                         </asp:ObjectDataSource>
                         
@@ -159,48 +166,52 @@
                             class="station-list" DataSourceID="ObjectDataSource1"  DataKeyNames="StationId" OnItemCommand="StationsListView_ItemCommand"
                             >
                             <LayoutTemplate>
-                            <table cellpadding="2" runat="server" id="stations"  >
-                                <tr>
-
-                                </tr>
-                                <tr runat="server" id="itemPlaceholder">
-                                </tr>
-                            </table>
+                                <table cellpadding="3" runat="server" id="stations" class="station-list">
+                                    <tr runat="server" id="itemPlaceholder">
+                                    </tr>
+                            </table>                        
+                            
                             </LayoutTemplate>
                             <ItemTemplate>
-                                <tr id="tr1" runat="server" class="station-list-container station-list-main"   >
-                                <td  
-                                    class="StationName">
+                                <tr id="tr1" runat="server" class="station-list"   >
+                                <td class="StationName station-list-container station-list-main">
 
-                                            <asp:Label  ID="FirstNameLabel" runat="server" 
-                                                Text='<%#Eval("Name") %>' class="station-name"/> 
+                                    <asp:Label  ID="FirstNameLabel" runat="server" 
+                                        Text='<%#Eval("Name") %>' class="station-name"/> 
                         
-                                            <br />
+                                     <br />
                        
-                                               <asp:Label ID="Label2" runat="server" Text="Bikes:" CssClass="station-list-label" />
-                                                <asp:Label  ID="Label5" runat="server" 
-                                                Text='<%#Eval("FreeBikes") %>' class="station-name"/>
+                                    <asp:Label ID="Label2" runat="server" Text="Bikes:" CssClass="station-list-label" />
+                                    <asp:Label  ID="Label5" runat="server" 
+                                    Text='<%#Eval("FreeBikes") %>' class="station-name"/>
                        
                        
-                                               <asp:Label ID="Label3" runat="server" Text="Slots:" CssClass="station-list-label" />
-                                                <asp:Label  ID="Label4" runat="server" 
-                                                Text='<%#Eval("Slots") %>' class="station-name"/>
-                                        </td>
-                                        <td>
-                                            <br />
+                                    <asp:Label ID="Label3" runat="server" Text="Slots:" CssClass="station-list-label" />
+                                    <asp:Label  ID="Label4" runat="server" 
+                                    Text='<%#Eval("Slots") %>' class="station-name"/>
+                                </td>
+                                <td class="StationName station-list-container station-list-city">
 
-                                        </td>
-                                        <td>                                           
-                                             <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="/images/appbar.star.png" CssClass="button button-fav" commandname="Favorite" ImageAlign="Right" />
-                                        </td>           
+                                    <asp:Label  ID="Label6" runat="server" 
+                                        Text='<%#Eval("City") %>' class="station-name"/>
+                                     <br />
+                                    <asp:Label  ID="Label8" runat="server" 
+                                    Text='<%#Eval("Country") %>' class="station-name"/>
+
+                                </td>                                       
+                                <td >                                          
+                                      <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="/images/appbar.star.png" CssClass="button-fav" commandname="Favorite" />
+                                </td>           
                                 </tr>
                             </ItemTemplate>
                  </asp:ListView>
-                        <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="selectSearch" TypeName="Business.DataObjectMethods" OnSelecting="ObjectDataSource1_Selecting">
+                        <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="searchAllInCity" TypeName="Business.DataObjectMethods" OnSelecting="ObjectDataSource1_Selecting">
                             <SelectParameters>
                                 <asp:ControlParameter ControlID="cityInput" Name="Name" PropertyName="Text" Type="String" ConvertEmptyStringToNull="False" DefaultValue="" />
+                                <asp:Parameter DbType="Guid" Name="UserId" />
                             </SelectParameters>
                         </asp:ObjectDataSource>
+
                         
                     </div>
                 

@@ -20,6 +20,11 @@ namespace Presentation.MemberPages
             e.InputParameters["UserId"] = Membership.GetUser().ProviderUserKey;
         }
 
+        protected void ObjectDataSource2_Selecting(object sender, ObjectDataSourceSelectingEventArgs e)
+        {
+            e.InputParameters["UserId"] = Membership.GetUser().ProviderUserKey;
+        }
+
         protected void StationsListView_ItemCommand(object sender, ListViewCommandEventArgs e)
         {
             //Label lbl = (Label)LoginView1.FindControl("Label1"); lbl.Text = "something";
@@ -61,6 +66,13 @@ namespace Presentation.MemberPages
         protected void Unnamed_Click(object sender, EventArgs e)
         {
             //Save city to database
+        }
+
+        protected void ObjectDataSource2_Updating(object sender, ObjectDataSourceMethodEventArgs e)
+        {
+            e.InputParameters["Original_UserId"] = Membership.GetUser().ProviderUserKey;
+
+
         }
     }
 }
