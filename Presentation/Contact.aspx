@@ -41,23 +41,30 @@
                         <a href="Networks.aspx">Networks</a>
 					    <a href="https://github.com/alinekborges/Bikeway_webApplication_final/" >GitHub</a>
 					    <a href="About.aspx" >About</a>					    
-					    <a href="Contact.aspx" >Contact</a>
+					    <a href="Contact.aspx" >the app</a>
 				    </nav>
 			    </section>
             </header>
 			<div class="main clearfix">
                 <div class="column">
-                    <p>Aline K Borges
-                        <br />
-                        alinekborges@gmail.com
-                    </p>		
-                 </div>	
-                <div class="column-left column">
-                    <p>
-                        Lucas M. Dilts
-                        <br />
-                        lucasdilts@gmail.com
-                    </p>		
+
+                    <asp:Image ID="Image1" runat="server" ImageUrl="images/app_screenshot.png"  Height="350px" />
+                </div>
+
+                <div class="column-right">
+                     BikeWay App is a simple and easy-to-use application for bike sharing users all over the world! Get information for New York City, Paris, and more than 100 other cities.
+                    <br />
+                    <br />
+                    - Pin your favorite stations to live tiles so you can check their status without even opening the app - personalize tile with color and name!
+                    <br />
+                    - Don't pay extra! Set a timer to remind you 5 minutes before you free period is over
+                    <br />
+                    - Find nearby stations
+                    <br />
+                    - Available for 107 cities via CityBik API (http://citybik.es)
+                    <br />
+                    <br />
+                    <a href="http://www.windowsphone.com/en-au/store/app/bikeway/01956524-8f89-479a-89a5-82df88f6d911?signin=true" ><asp:Image runat="server"  ImageUrl="images/windows_badge.png" /> </a>
                  </div>	
 				
                </div>                    	

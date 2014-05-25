@@ -63,6 +63,8 @@
     <Content Include="fonts\icomoon\icomoon.svg" />
     <Content Include="fonts\icomoon\license.txt" />
     <Content Include="fonts\icomoon\Read Me.txt" />
+    <Content Include="images\windows_badge.png" />
+    <Content Include="images\app_screenshot.png" />
     <Content Include="images\appbar.star.delete.png" />
     <Content Include="images\appbar.star.png" />
     <Content Include="images\favicon.ico" />

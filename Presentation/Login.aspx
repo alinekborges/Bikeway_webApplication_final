@@ -41,7 +41,7 @@
                         <a href="Networks.aspx">Networks</a>
 					    <a href="https://github.com/alinekborges/Bikeway_webApp" >GitHub</a>
 					    <a href="About.aspx" >About</a>					    
-					    <a href="Contact.aspx" >Contact</a>
+					    <a href="Contact.aspx" >the app</a>
 				    </nav>
 			    </section>
             </header>

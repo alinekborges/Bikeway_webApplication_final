@@ -45,7 +45,7 @@
                         <a href="Networks.aspx">Networks</a>
 					    <a href="https://github.com/alinekborges/Bikeway_webApplication_final/" >GitHub</a>
 					    <a href="About.aspx" >About</a>					    
-					    <a href="Contact.aspx" >Contact</a>
+					    <a href="Contact.aspx" >The app</a>
 				    </nav>
 			    </section>
             </header>
@@ -55,7 +55,12 @@
                         <br />
                         @author Aline Borges
                         <br />
+                        alinekborges@gmail.com
+                        <br />
+                        <br />
                         @author Lucas Dilts
+                        <br />
+                        lucasdilts@gmail.com
                     </p>		
                  </div>	
                 <div class="column-right">
